@@ -168,8 +168,8 @@ select {
 .cell {
     aspect-ratio: 1 / 1;
     border-radius: 7px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    background: #1a1a2e;
+    border: 1px solid #2d2d4e;
     transition: background 0.15s;
 }
 
@@ -190,8 +190,8 @@ select {
 }
 
 .wall {
-    background: #0f0f1a;
-    border: 1px solid #2a2a3a;
+    background: #0a0a14;
+    border: 1px solid #111128;
 }
 
 .energy {
