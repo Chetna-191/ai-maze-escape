@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Maze Escape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO PAGE -->
+<div id="intro" class="page glass">
+    <h1>✨ AI Maze Escape</h1>
+    <div class="instructions">
+        <h3>🎮 How to Play</h3>
+        <p>⬆⬇⬅➡ &nbsp; Arrow keys or buttons to move<br><br>
+        🟢 Reach the <b>green goal</b> to win<br><br>
+        🔴 Avoid the <b>red AI</b> — it chases you<br><br>
+        ⚡ Collect <b>gold energy</b> for score<br><br>
+        🌀 <b>Purple portals</b> teleport you<br><br>
+        ⬛ <b>Black walls</b> block movement</p>
+    </div>
+    <button onclick="startGameScreen()">Start Game 🚀</button>
+</div>
+
+<!-- GAME PAGE -->
+<div id="game" class="page glass hidden">
+    <h2>✨ AI Maze Escape</h2>
+
+    <div class="top-controls">
+        <select id="difficulty">
+            <option value="easy">Easy 😌</option>
+            <option value="medium" selected>Medium 🧠</option>
+            <option value="hard">Hard 🔥</option>
+        </select>
+        <button onclick="startGame()">▶ Start</button>
+        <button onclick="resetGame()">↺ Reset</button>
+        <button onclick="goBack()">← Back</button>
+    </div>
+
+    <div class="legend">
+        <div class="leg"><div class="dot player-dot"></div>You</div>
+        <div class="leg"><div class="dot ai-dot"></div>AI</div>
+        <div class="leg"><div class="dot goal-dot"></div>Goal</div>
+        <div class="leg"><div class="dot energy-dot"></div>Energy</div>
+        <div class="leg"><div class="dot portal-dot"></div>Portal</div>
+        <div class="leg"><div class="dot wall-dot"></div>Wall</div>
+    </div>
+
+    <p class="score-line">⚡ Energy: <span id="score">0</span></p>
+
+    <div id="grid-wrap">
+        <div id="grid"></div>
+
+        <!-- POPUP OVERLAY -->
+        <div id="popup" class="overlay hidden">
+            <div class="popup-box">
+                <h2 id="popupText"></h2>
+                <button onclick="playAgain()">Play Again 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="row"><button onclick="movePlayer('up')">⬆️</button></div>
+        <div class="row">
+            <button onclick="movePlayer('left')">⬅️</button>
+            <button onclick="movePlayer('down')">⬇️</button>
+            <button onclick="movePlayer('right')">➡️</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
